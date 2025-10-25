@@ -20,6 +20,7 @@ public class Factura {
     private LocalDateTime fecha;
     private List<ItemFactura> items;
     private EstadoFactura estado;
+    private EstadoFacturaState estadoState;
     
     public int getNumero(){ return numero; }
     public Cliente getCliente(){ return cliente; }
@@ -32,6 +33,10 @@ public class Factura {
     
     public void setEstado(EstadoFactura e){ this.estado=e; }
 
+    public void setEstadoState(EstadoFacturaState estadoState) {
+        this.estadoState = estadoState;
+    }
+    
     public Factura(int numero, Cliente cliente) {
         this.numero=numero; 
         this.cliente=cliente; 
