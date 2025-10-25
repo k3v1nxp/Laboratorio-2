@@ -10,4 +10,17 @@ package Metodos;
  */
 public abstract class TemplateMethod {
     
+    public final void processData() {
+        agregar();
+        buscar();
+        eliminar();
+    }
+    
+    protected abstract void agregar();
+    
+    protected abstract void buscar();
+    
+    protected void eliminar() {
+        
+    }
 }
