@@ -4,6 +4,7 @@
  */
 package Catalogo;
 
+import Metodos.TemplateMethod;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -15,20 +16,20 @@ import java.util.stream.Collectors;
  *
  * @author jprod
  */
-public class RepositorioProductos {
+public class RepositorioProductos extends TemplateMethod {
     private final Map<String, Producto> productos = new HashMap<>();
 
-    public void guardar(Producto p){
-        productos.put(p.getCodigo(), p); 
-    }
+   // public void guardar(Producto p){
+    //    productos.put(p.getCodigo(), p); 
+    //}
     
-    public Optional<Producto> buscar(String codigo){ 
-        return Optional.ofNullable(productos.get(codigo)); 
-    }
+   // public Optional<Producto> buscar(String codigo){ 
+    //    return Optional.ofNullable(productos.get(codigo)); 
+    //}
     
-    public void eliminar(String codigo){
-        productos.remove(codigo); 
-    }
+    //public void eliminar(String codigo){
+      //  productos.remove(codigo); 
+    //}
     
     /**
      * Iterator
@@ -48,5 +49,20 @@ public class RepositorioProductos {
         return productos.values().stream()
                 .filter(p->p.getCategoria()!=null && p.getCategoria().getId()==cat.getId())
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    protected void agregar(Producto p) {
+       productos.put(p.getCodigo(), p);
+     }
+
+    @Override
+    protected Optional<Producto> buscar(String codigo){ 
+     return Optional.ofNullable(productos.get(codigo)); 
+    }
+
+    @Override
+    protected void eliminar(String codigo) {
+        productos.remove(codigo); 
     }
 }

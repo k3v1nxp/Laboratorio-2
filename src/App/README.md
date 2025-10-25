@@ -58,3 +58,7 @@ El diseño sigue principios de **buenas prácticas**, **encapsulamiento**, **sep
 └── README.md
 
 ## 🧩 Patrones de diseño aplicados
+aplique o intente aplicar el patron de diseño Template Method en la clase 
+repositorio producto, el metodo debe aplicarse de igual manera en las clases Repositorio clientes,
+Repositorio facturas, repositorio cliente y repositorio categorias, vi la oportunidad
+de aplicacion especificamente en los metodos agregar, buscar y eliminar de dichas clases   

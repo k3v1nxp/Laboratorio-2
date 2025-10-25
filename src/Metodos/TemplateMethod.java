@@ -10,7 +10,7 @@ package Metodos;
  */
 public abstract class TemplateMethod {
     
-    public final void processData() {
+    public final void plantilla() {
         agregar();
         buscar();
         eliminar();
@@ -20,7 +20,7 @@ public abstract class TemplateMethod {
     
     protected abstract void buscar();
     
-    protected void eliminar() {
+    protected abstract void eliminar();
         
     }
-}
+
