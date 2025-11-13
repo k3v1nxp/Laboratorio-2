@@ -51,18 +51,33 @@ public class RepositorioProductos extends TemplateMethod {
                 .collect(Collectors.toList());
     }
 
-    @Override
+   // @Override
     protected void agregar(Producto p) {
        productos.put(p.getCodigo(), p);
      }
 
-    @Override
+    //@Override
     protected Optional<Producto> buscar(String codigo){ 
      return Optional.ofNullable(productos.get(codigo)); 
     }
 
-    @Override
+   // @Override
     protected void eliminar(String codigo) {
         productos.remove(codigo); 
+    }
+
+    @Override
+    protected void agregar() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    protected void buscar() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    protected void eliminar() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

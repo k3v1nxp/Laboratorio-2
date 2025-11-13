@@ -39,7 +39,7 @@ public class ServicioCatalogo {
     }
 
     public void crearProducto(Producto p){
-        productoRepo.guardar(p);
+        productoRepo.agregar(p);
     }
     
     public boolean editarProducto(String codigo, String nombre, double precio, int stock, Categoria cat){
@@ -49,7 +49,7 @@ public class ServicioCatalogo {
             p.setPrecio(precio);
             p.setStock(stock);
             p.setCategoria(cat);
-            productoRepo.guardar(p);
+            productoRepo.agregar(p);
             return true; // producto encontrado y editado
         })
         .orElse(false); // producto no encontrado
