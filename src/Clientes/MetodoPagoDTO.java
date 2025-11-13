@@ -14,9 +14,7 @@ public class MetodoPagoDto {
     private final String detalles;
     private final String cliente;
 
-    public String getCliente() {
-        return cliente;
-    }
+    public String getCliente() {return cliente;}
     public int getId(){ return id; }
     public String getTipo(){ return tipo; }
     public String getDetalles(){ return detalles; }
